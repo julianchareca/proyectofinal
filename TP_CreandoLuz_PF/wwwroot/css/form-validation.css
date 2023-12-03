@@ -1,0 +1,33 @@
+.container {
+  max-width: 90%;
+}
+
+.imgCL {
+  width: 15%;
+  height: auto;
+}
+
+.imgWPP {
+  width: 15%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.green-button {
+  color: #ffffff;
+  border-color: #ffe5ac; /* Change to the desired green color */
+}
+
+.green-button:hover {
+  color: #fff;
+  background-color: #ff9100; /* Change to the desired darker green color */
+  border-color: #ffb14a; /* Change to the desired darker green color */
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.card{
+  margin-top: 10%;
+}

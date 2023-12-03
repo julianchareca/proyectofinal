@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - TP_CreandoLuz_PF</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/carousel.css" asp-append-version="true">
+</head>
+<body>
+    <div class="container marketing">
+        <div class="row featurette">
+        @if (TempData.ContainsKey("MensajeExito"))
+{
+    <div class="alert alert-success">
+        @TempData["MensajeExito"]
+    </div>
+}
+            <div class="col-md-7">
+                <h2 class="featurette-heading">CONÓCENOS ¡Creemos que el amor sana!</h2>
+                <p class="lead">Somos Creando Luz, una organización no gubernamental.</p>
+            </div>
+            <div class="col-md-5">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img class="d-block w-100" interval=5000 src="https://img.freepik.com/fotos-premium/multitud-ninos-riendo-es-vista-conmovedora-que-representa-alegria-pura-espiritu-despreocupado-infancia-ia-generativa_213438-8195.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                <img class="d-block w-100" interval=5000 src="https://img.freepik.com/fotos-premium/felicidad-limite-ninos-felices-juntos-al-aire-libre-caras-sonriendo-descuidado_21730-6794.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" interval=5000 src="https://e1.pxfuel.com/desktop-wallpaper/636/251/desktop-wallpaper-children-happy-happy-children-joy-school-smile-smiling-happy-children.jpg" alt="Third slide">
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-5">
+                <img src="https://img.freepik.com/fotos-premium/ninos-felices-tiro-medio-juntos_23-2149018881.jpg" class="img-fluid" alt="Imagen de impacto social">
+            </div>
+            <div class="col-md-7">
+                <h2 class="featurette-heading">¿QUÉ HACEMOS?</h2>
+                <p class="lead">Realizamos impacto social para niños en situación oncológica, transformamos para afuera y para adentro.</p>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">NUESTRAS REDES</h2>
+                <p class="lead">¡Conéctate con nosotros en las redes sociales y únete a nuestra comunidad!</p>
+                <div class="image-container">
+                    <a href="https://www.instagram.com/creando.luz/?hl=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/creandoluzong/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook"></a>
+                    <a href="http://wa.me/5491162165102/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img src="https://img.freepik.com/foto-gratis/ninos-felices-mostrando-signo-ok-patio-recreo_329181-7543.jpg" class="img-fluid" alt="Imagen de contacto">
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette custom-center">
+            <div class="col-md-7">
+            <h2 class="featurette-heading">Si nos queres apoyar</h2>
+                <a href='@Url.Action("formDonar","Home")' class=" botonContacto btn btn-primary btn-contact btn-lg">Empezá a donar</a>
+            </div>
+        </div>
+    </div>
+    <script src="../../wwwroot/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

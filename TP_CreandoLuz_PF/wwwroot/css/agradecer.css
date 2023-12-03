@@ -1,0 +1,28 @@
+.imgCL {
+    width: 15%;
+    height: auto;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+.green-button {
+    color: #ffffff;
+    border-color: #ffe5ac; /* Change to the desired green color */
+}
+  
+.green-button:hover {
+    color: #fff;
+    background-color: #ff9100; /* Change to the desired darker green color */
+    border-color: #ffb14a; /* Change to the desired darker green color */
+}
+
+.centered-content {
+    text-align: center;
+    margin-top: 20rem;
+}
+
+.enlarge-text {
+    font-size: 3rem;
+}

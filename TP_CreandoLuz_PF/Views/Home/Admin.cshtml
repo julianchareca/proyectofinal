@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Admin";
+    var httpContextAccessor = ViewContext.HttpContext;
+    var userMail = httpContextAccessor?.Session.GetString("UserMail") ?? string.Empty;
+}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="~/css/agradecer.css" asp-append-version="true">
+@if(string.Equals(userMail, "admin@admin", StringComparison.OrdinalIgnoreCase))
+{
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Teléfono</th>
+                    <th>Correo Electrónico</th>
+                    <th>Cuerpo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var form in Model)
+                {
+                    <tr>
+                        <td>@form.Nombre</td>
+                        <td>@form.Apellido</td>
+                        <td>@form.Telefono</td>
+                        <td>@form.Mail</td>
+                        <td>@form.Cuerpo</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+}
+else{
+    <br><br><br><br>
+<body>
+    <div class="container">
+        <h1>ACCESO DENEGADO</h1>
+        <p>Lo siento, no tienes permisos para acceder a esta página.</p>
+        <div class="fire"></div>
+    </div>
+</body>
+}
